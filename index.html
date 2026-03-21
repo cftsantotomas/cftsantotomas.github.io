@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validación de Certificados</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+#resultado {
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Validación de certificados</h2>
+
+    <label>RUT:</label>
+    <input type="text" id="rut" placeholder="Ej: 21204909-3">
+
+    <label>Código de validación:</label>
+    <input type="text" id="codigo" placeholder="Ingrese código">
+
+    <button class="btn-primary" onclick="validar()">Verificar</button>
+    <button class="btn-secondary" onclick="limpiar()">Limpiar</button>
+
+    <div id="resultado"></div>
+</div>
+
+<script>
+function validar() {
+    const rut = document.getElementById('rut').value.trim();
+    const codigo = document.getElementById('codigo').value.trim();
+    const resultado = document.getElementById('resultado');
+
+    if (rut === '21204909-3' && codigo === 'WXHGF80S') {
+        resultado.style.color = 'green';
+        resultado.textContent = 'DOCUMENTO VALIDO';
+    } else {
+        resultado.style.color = 'red';
+        resultado.textContent = 'DOCUMENTO NO VALIDO';
+    }
+}
+
+function limpiar() {
+    document.getElementById('rut').value = '';
+    document.getElementById('codigo').value = '';
+    document.getElementById('resultado').textContent = '';
+}
+</script>
+
+</body>
+</html>
