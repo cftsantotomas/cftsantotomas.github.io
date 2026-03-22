@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validación</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 420px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.secondary {
+    background: #e0e0e0;
+    color: #007bff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>validación</h1>
+
+    <label>Número de identificación:</label>
+    <input type="text" value="212049093" readonly>
+
+    <label>Código de validación:</label>
+    <input type="text" value="WXHGF805" readonly>
+
+    <div class="success">
+        El número de identificación y código de validación ingresados son válidos.
+        Puede descargar el certificado para verificar los datos en el mismo.
+    </div>
+
+    <button>Descargar certificado</button>
+    <button class="secondary">Nueva consulta</button>
+</div>
+
+</body>
+</html>
