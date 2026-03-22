@@ -68,6 +68,13 @@ button {
     background: #e0e0e0;
     color: #007bff;
 }
+
+/* 🔥 OCULTAR BOTONES EN PDF */
+@media print {
+    button {
+        display: none;
+    }
+}
 </style>
 </head>
 
@@ -87,9 +94,15 @@ button {
         Puede descargar el certificado para verificar los datos en el mismo.
     </div>
 
-    <button>Descargar certificado</button>
-    <button class="secondary">Nueva consulta</button>
+    <button onclick="descargarPDF()">Descargar certificado</button>
+    <button class="secondary" onclick="window.location.href='index.html'">Nueva consulta</button>
 </div>
+
+<script>
+function descargarPDF() {
+    window.print();
+}
+</script>
 
 </body>
 </html>
